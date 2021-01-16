@@ -1,0 +1,23 @@
+<!-- This is the master template file for the html files.-->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8" />
+  <!-- The code below will be relative to the individual pages based on the specific title given. -->
+  <title>{% block title %}{% endblock %} - Hello Flask!</title>
+  <link type="text/css" rel="stylesheet"
+       href="{{ url_for('static',filename='styles/style.css')}}" />
+</head>
+<body>
+  <nav>
+  <ul class="menu">
+                     <li><a href="{{ url_for('main') }}">Home</a></li>
+                     <li><a href="{{ url_for('search') }}">Search</a></li>
+                     <li><a href="{{ url_for('register') }}">Register</a></li>
+                     <li><a href="{{ url_for('uploads') }}">Uploads</a></li>
+                  </ul>
+  </nav>
+{% block body %}{% endblock %}
+
+</body>
+</html>

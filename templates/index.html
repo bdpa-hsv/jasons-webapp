@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<h1>This is a HTML file that is using Flask and Python</h1>
+<h2>This is a form for receiving input from the end-user</h2>
+   <form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <input type="submit" value="Submit">
+</form> 
+<a href="{{ url_for('search') }}">Click to Search</a>
+{% endblock %}

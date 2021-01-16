@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}Uploads{% endblock %}
+
+{% block body %}
+<h1>Upload</h1>
+
+ <h3>Show a file-select field which allows multiple files:</h3>
+<div class="uploads">
+  <form action = "http://0.0.0.0:5000/uploads" method = "POST" enctype = "multipart/form-data">
+         <input type = "file" name = "File" />
+         <input type = "submit" value = "Submit" />
+
+</form>
+</div>
+
+{% endblock %}
